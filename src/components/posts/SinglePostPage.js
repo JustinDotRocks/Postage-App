@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import EditPostForm from './EditPostForm';
 
 const SinglePostPage = ( { match } ) => {
     
@@ -25,8 +26,8 @@ const SinglePostPage = ( { match } ) => {
             <article>
                 <h2>{post.title}</h2>
                 <p>{post.content}</p>
-                <Link to={`/editPost/${post.id}`} >
-                    Edit Post
+                <Link to={`/editPost/${post.id}`} component={EditPostForm}>
+                    
                 </Link>
             </article>
         </section>

@@ -25,13 +25,13 @@ function App() {
           <Route exact path="/posts/:postId" component={SinglePostPage} />
           <Route path="/posts">
             <Main>
-              
+              <AddPostForm />
+              <PostsList />
             </Main>
           </Route>
           <Route>
             <Main path="/">
-              <AddPostForm />
-              <PostsList />
+              
             </Main>
           </Route>
         </Switch>
