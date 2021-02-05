@@ -3,11 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import EditPostForm from './EditPostForm';
+import PostAuthor from './PostAuthor';
+import TimeAgo from './TimeAgo';
+import ReactionButtons from './ReactionButtons'
 
 const SinglePostPage = ( { match } ) => {
     
-    const { postId }  = match.params
+    const { postId } = match.params
 
     const post = useSelector(state => 
         state.posts.find(post => post.id === postId)
@@ -25,10 +27,13 @@ const SinglePostPage = ( { match } ) => {
         <section>
             <article>
                 <h2>{post.title}</h2>
+                <PostAuthor userId={post.user} />
+                <TimeAgo timestamp={post.date}/>
                 <p>{post.content}</p>
-                <Link to={`/editPost/${post.id}`} component={EditPostForm}>
-                    
+                <Link to={`/editPost/${post.id}`} >
+                    Edit Post
                 </Link>
+                <ReactionButtons post={post} />
             </article>
         </section>
     )

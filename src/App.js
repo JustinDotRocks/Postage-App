@@ -9,6 +9,7 @@ import Navbar from './components/navbar/Navbar';
 import PostsList from './components/posts/PostsList';
 import AddPostForm from './components/posts/AddPostForm';
 import SinglePostPage from './components/posts/SinglePostPage';
+import EditPostForm from './components/posts/EditPostForm';
 
 const Main = styled.div`
   height: 100vh;
@@ -26,17 +27,17 @@ function App() {
           <Route path="/posts">
             <Main>
               <AddPostForm />
-              <PostsList />
+              <PostsList />            
             </Main>
           </Route>
-          <Route>
-            <Main path="/">
-              
+          <Route exact path="/editPost/:postId" component={EditPostForm} />
+          <Route path="/">
+            <Main >
+              Home
             </Main>
           </Route>
         </Switch>
       </div>
-
     </Router>
   );
 }
