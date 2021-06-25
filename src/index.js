@@ -6,6 +6,12 @@ import './index.css';
 import store from './store/store';
 import { Provider } from 'react-redux';
 
+import { fetchUsers } from './components/users/usersSlice';
+
+import './api/server';
+
+store.dispatch(fetchUsers());
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

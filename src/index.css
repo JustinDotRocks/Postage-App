@@ -1,10 +1,15 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Noto Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 h1 {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
+}
+
+h2 {
+	color: #0089aa;
+	margin-bottom: 10px;
 }
