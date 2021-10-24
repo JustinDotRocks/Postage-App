@@ -3,8 +3,10 @@ import React from 'react';
 const AboutPage = () => {
 	return (
 		<div>
-			About: How this App was made and what Technologies were used. Why was this
-			app made and why was it made whit particular way?
+			Made with React, Redux Toolkit and Styled-components. Html, Css and
+			JavaScript were used as well. Moment.js was used for timestamping and
+			ordering posts. Faker.js created fake posts and notification data while
+			Mirrage.js called on a fake API to retreive and post data.
 		</div>
 	);
 };
